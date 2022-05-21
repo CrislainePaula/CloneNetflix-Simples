@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700;800&display=swap');
+
+:root{
+    --vermelho:#E50914;
+    --preta: #141414;
+    --branco: #dfdfdf;
+    --cinza: #4b4b4b;
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background: var(--preta);
+    font-family: "Open Sans", sans-serif;
+}
+
+header .container{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0px 30px 0px 30px;
+}
+
+header .logo{
+    color: var(--vermelho);
+    font-size: 40px;
+}
+
+header nav a{
+    text-decoration: none;
+    color:var(--branco);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+header nav a:hover{
+    color: #ffffff;
+}
+
+/*Filme principal*/
+
+.filme-principal{
+    font-size: 20px;
+    background: linear-gradient(rgba(0, 0, 0, 0.459),rgba(0, 0, 0, 0.459)100%), url('../imagens/fundo.jpg');
+    height: 550px;
+    background-size: cover;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+.filme-principal .descricao{
+    margin: 0px 30px 30px 30px;
+    color: var(--branco);
+    font-size: 16px;
+    width: 50%;
+}
+
+.filme-principal .titulo{
+    font-size: 50px;
+    margin: 0px 30px 0px 30px;
+    color: var(--branco);
+}
+
+.filme-principal .sinopse{
+    font-size: 20px;
+    margin: 0px 30px 0px 30px;
+    color: var(--branco);
+}
+
+.botoes{
+    margin: 0px 30px 0px 30px;
+}
+
+.botoes .botao-um{
+    background-color: var(--branco);
+    color: var(--preta);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.botoes .botao-dois{
+    background-color: var(--cinza);
+    color: var(--branco);
+    border: none;
+    padding: 15px 30px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.5s ease all;
+}
+
+.botoes .botao-um:hover{
+    background-color: var(--preta);
+    color: var(--branco);
+}
+
+.botoes .botao-dois:hover{
+    background-color: var(--branco);
+    color: var(--preta);
+}
+
+.botoes i{
+    margin-right: 8px;
+}
+
+.box-filme{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+/*responsividade*/
+
+@media screen and (max-width:700px){
+    header .container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .botao-um, .botao-dois{
+        margin-top: 5px;
+        width: 300px;
+    }
+}
